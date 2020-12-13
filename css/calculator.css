@@ -1,0 +1,172 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: radial-gradient(circle at 71% 29%, rgba(250, 250, 250, 0.08) 0%, rgba(250, 250, 250, 0.08) 32%, transparent 32%, transparent 100%), radial-gradient(circle at 100% 82%, rgba(82, 82, 82, 0.25) 0%, rgba(82, 82, 82, 0.25) 26%, transparent 26%, transparent 100%), radial-gradient(circle at 30% 35%, rgba(78, 78, 78, 0.03) 0%, rgba(78, 78, 78, 0.03) 55%, transparent 55%, transparent 100%), radial-gradient(circle at 71% 54%, rgba(114, 14, 186, 0.59) 0%, rgba(114, 14, 186, 0.59) 13%, transparent 13%, transparent 100%), radial-gradient(circle at 17% 19%, rgba(202, 202, 202, 0) 0%, rgba(202, 202, 202, 0) 83%, transparent 83%, transparent 100%), radial-gradient(circle at 28% 30%, rgba(219, 219, 219, 0.03) 0%, rgba(219, 219, 219, 0.03) 39%, transparent 39%, transparent 100%), radial-gradient(circle at 56% 19%, rgba(184, 28, 156, 0.4) 0%, rgba(184, 28, 156, 0.4) 33%, transparent 33%, transparent 100%), linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    margin: 2rem auto;
+    width: 90vw;
+    height: 80vh;
+}
+
+.screen {
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur;
+    color: #fff;
+    height: 20%;
+    text-align: right;
+    font-size: 2em;
+    padding: 1rem .5rem;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    backdrop-filter: blur(15px);
+
+}
+
+.screen p {
+    vertical-align: middle;
+    margin: 0;
+    padding: .6em .1em;
+
+}
+
+.calc-buttons {
+    border-radius: 0px 0px 10px 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    height: 80%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fila {
+    height: 20%;
+    width: 100%;
+    display: flex;
+}
+
+.fila button {
+    height: 100%;
+}
+
+.fila .simbolo {
+    align-content: right;
+}
+
+
+.simbolo,
+.numero,
+.arrow {
+    width: 25%;
+    border: none;
+    padding: 10px;
+    height: 78px;
+    font-size: 2em;
+
+}
+
+.clear {
+    font-size: 2em;
+    border: none;
+    width: 50%;
+}
+
+.clear,
+.numero,
+.arrow,
+.zero {
+
+    background-color: rgba(143, 143, 143, 0.5);
+}
+
+.clear:active {
+    background-color: rgba(255, 39, 39, 0.57)
+}
+
+.numero:active,
+.arrow:active,
+.zero:active {
+    background-color: #bbbcbe;
+    border-radius: 0;
+}
+
+
+
+.simbolo:active {
+    background-color: rgba(233, 143, 59, 0.802);
+}
+
+
+
+.simbolo {
+    background-color: rgba(233, 143, 59, 0.5);
+    color: white;
+}
+
+.zero {
+    width: 75%;
+    font-size: 2em;
+    border-radius: 0 0 0 10px;
+}
+
+.igual {
+    border-radius: 0 0 10px 0;
+}
+
+
+@media (orientation:landscape) {
+
+    .wrapper {
+        height: auto;
+        width: 400px;
+    }
+
+    .screen {
+        height: 78px;
+        width: 400px;
+    }
+
+    .fila {
+        width: 100%;
+    }
+
+    .calc-buttons {
+        height: auto;
+    }
+
+    .fila button {
+        height: auto;
+    }
+
+    .clear:hover {
+        background-color: rgba(255, 39, 39, 0.57)
+    }
+
+    .numero:hover,
+    .arrow:hover,
+    .zero:hover {
+        background-color: #ebebeb;
+    }
+
+    .simbolo:hover {
+        background-color: rgba(233, 143, 59, 0.802);
+    }
+}
